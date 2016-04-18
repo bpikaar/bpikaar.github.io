@@ -31,9 +31,9 @@ function startGame(){
     
     var infoText = document.getElementById("infoText");
     var clickArea = document.getElementById("clickArea");
-    clickArea.addEventListener("click", function() {
+    clickArea.addEventListener("click", function(event) {
         if(infoText) infoText.remove();
-        createFish();
+        createFish(event);
     })
     
     // demo code : verander basis positie
@@ -43,14 +43,17 @@ function startGame(){
 }
 
 
-function createFish()
+function createFish(event)
 {
     var fish = document.createElement("fish");
     
     // demo code : verander basis positie
-    fish.style.left = Math.random() * (window.innerWidth - 130)  + "px";
-    fish.style.top  = Math.random() * (window.innerHeight - 110) + "px";
+    // fish.style.left = Math.random() * (window.innerWidth - 130)  + "px";
+    // fish.style.top  = Math.random() * (window.innerHeight - 110) + "px";
 
+    fish.style.left = event.pageX + "px";
+    fish.style.top  = event.pageY + "px";
+    
     var color = Math.random() * 360;
     // demo code : verander kleur
     fish.style.webkitFilter = "hue-rotate("+color+"deg)";
