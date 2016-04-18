@@ -22,17 +22,19 @@
 // fish.classList.add(".deadfish");
 var numberOfFish = 0;
 var ui = document.getElementsByTagName("ui")[0];
-// test
-
-// Iets anders
-
-// conflict
+var maxBubbles = 30;
+var currentNumberOfBubbles = 0;
 
 function startGame(){
-    createFish();
+    
     createBubble();
     
-    window.setTimeout(createBubble, 5);
+    var infoText = document.getElementById("infoText");
+    
+    document.addEventListener("click", function() {
+        if(infoText) infoText.remove();
+        createFish();
+    })
     
     // demo code : verander basis positie
     var bubble = document.getElementsByTagName("bubble")[0];
@@ -59,19 +61,26 @@ function createFish()
     numberOfFish++;
     ui.innerHTML = "Number of fish: " + numberOfFish;
     
-    window.setTimeout(createFish, 100);
+    //window.setTimeout(createFish, 100);
 }
 
 
 
 function createBubble()
 {
+    currentNumberOfBubbles++;
+    
     var bubble = document.createElement("bubble");
     
     bubble.style.left = Math.random() * (window.innerWidth - 55 )   + "px";
     bubble.style.top  = "0px";
     
     document.body.appendChild(bubble);
+    
+    if (currentNumberOfBubbles < maxBubbles) {
+        var time = Math.random() * 500 + 500;
+        window.setTimeout(createBubble, time);
+    }
 }
 
 //

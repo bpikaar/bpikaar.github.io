@@ -34,7 +34,6 @@ fish {
 bubble {
     background-image: url(../images/bubble.png);
     width:55px; height: 55px;
-    left:50vw;
     animation: bubbleup 3s linear infinite;
 }
 
@@ -42,6 +41,16 @@ background {
     background-image: url(../images/water.jpg);
     width:100%; height: 100%;
     background-size: cover;
+}
+
+#infoText{
+  font-size: 3em;
+  color: white;
+  text-shadow: 3px 3px darkgray;
+  
+  top: 50vh;
+  width: 100%;
+  text-align:  center;
 }
 
 @keyframes fishanimation {
