@@ -1,29 +1,11 @@
-//
-// OPDRACHT
-//
-// 1
-// VOEG VIA JAVASCRIPT EEN VIS EN EEN BUBBLE TOE
-// ZET DE VIS OP EEN WILLEKEURIGE PLEK IN HET SCHERM MET EEN WILLEKEURIGE KLEUR
-// ZET DE BUBBLE OP EEN WILLEKEURIGE X POSITIE
+var fishWidth       = 130;
+var fishHeight      = 110;
 
-// 2
-// MAAK EEN FOR LOOP DIE 50 VISJES EN BUBBLES TOEVOEGT. DEZE MOETEN ALLEMAAL ANDERS ZIJN!
+var maxBubbles      = 30;
+var numberOfBubbles = 0;
+var numberOfFish    = 0;
 
-// 3
-// GEBRUIK NU SETTIMOUT OF SETINTERVAL OM NIEUWE VISJES EN BUBBLES TE PLAATSEN
-
-// 4
-// PLAATS EEN TITEL EN START KNOP. ALS JE OP START KLIKT VERDWIJNEN DE TITEL EN KNOP, EN 
-// DAARNA WORDEN PAS DE VISJES GETEKEND
-
-// 5 
-// HANG EEN CLICK EVENT LISTENER AAN ELK VISJE. ALS GEKLIKT WORDT
-// GEEF JE DE GEKLIKTE VIS EEN NIEUWE CLASS DIE EEN ANDERE ACHTERGROND HEEFT 
-// fish.classList.add(".deadfish");
-var numberOfFish = 0;
 var ui = document.getElementsByTagName("ui")[0];
-var maxBubbles = 30;
-var currentNumberOfBubbles = 0;
 
 function startGame(){
     
@@ -34,25 +16,33 @@ function startGame(){
     clickArea.addEventListener("click", function(event) {
         if(infoText) infoText.remove();
         createFish(event);
-    })
-    
-    // demo code : verander basis positie
-    var bubble = document.getElementsByTagName("bubble")[0];
-    bubble.style.left = "60px";
-    bubble.style.top = "0px";
+    });
 }
 
-
+/**
+ * @param event, touch event or mouse event
+ */
 function createFish(event)
 {
     var fish = document.createElement("fish");
-    
-    // demo code : verander basis positie
-    // fish.style.left = Math.random() * (window.innerWidth - 130)  + "px";
-    // fish.style.top  = Math.random() * (window.innerHeight - 110) + "px";
 
-    fish.style.left = event.pageX + "px";
-    fish.style.top  = event.pageY + "px";
+    var tx, ty;
+
+    if (event.pageX)
+    {
+        tx = event.pageX;
+        ty  = event.pageY;
+    }
+    else // for mobile browser
+    {
+        var t = e.touches[0];
+
+        tx = t.pageX - myElement.offsetLeft;
+        ty = t.pageY - myElement.offsetTop;    
+    }
+    
+    fish.style.left = (tx - fishWidth / 2)  + "px";
+    fish.style.top  = (ty - fishHeight / 2) + "px"; 
     
     var color = Math.random() * 360;
     // demo code : verander kleur
@@ -63,15 +53,11 @@ function createFish(event)
     
     numberOfFish++;
     ui.innerHTML = "Number of fish: " + numberOfFish;
-    
-    //window.setTimeout(createFish, 100);
 }
-
-
 
 function createBubble()
 {
-    currentNumberOfBubbles++;
+    numberOfBubbles++;
     
     var bubble = document.createElement("bubble");
     
@@ -80,7 +66,7 @@ function createBubble()
     
     document.body.appendChild(bubble);
     
-    if (currentNumberOfBubbles < maxBubbles) {
+    if (numberOfBubbles < maxBubbles) {
         var time = Math.random() * 500 + 500;
         window.setTimeout(createBubble, time);
     }
