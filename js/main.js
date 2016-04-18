@@ -26,6 +26,9 @@ var ui = document.getElementsByTagName("ui")[0];
 
 // Iets anders
 
+
+// conflict
+
 function startGame(){
     createFish();
     createBubble();
