@@ -27,7 +27,11 @@ var ui = document.getElementsByTagName("ui")[0];
 // Iets anders
 
 
+<<<<<<< HEAD
 // Nog iets anders
+=======
+// conflict
+>>>>>>> 05b99bf2e9197e6d91e940a2bb59e09c072a91cc
 
 function startGame(){
     createFish();
