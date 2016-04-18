@@ -26,6 +26,9 @@ var ui = document.getElementsByTagName("ui")[0];
 
 // Iets anders
 
+
+// Nog iets anders
+
 function startGame(){
     createFish();
     createBubble();
