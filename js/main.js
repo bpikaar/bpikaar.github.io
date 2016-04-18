@@ -30,8 +30,8 @@ function startGame(){
     createBubble();
     
     var infoText = document.getElementById("infoText");
-    
-    document.addEventListener("click", function() {
+    var clickArea = document.getElementById("clickArea");
+    clickArea.addEventListener("click", function() {
         if(infoText) infoText.remove();
         createFish();
     })
