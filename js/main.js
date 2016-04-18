@@ -23,6 +23,7 @@
 var numberOfFish = 0;
 var ui = document.getElementsByTagName("ui")[0];
 // test
+// Nog en test
 function startGame(){
     createFish();
     createBubble();
