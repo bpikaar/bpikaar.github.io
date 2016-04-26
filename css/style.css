@@ -44,7 +44,7 @@ background {
 }
 
 .dead{
-  background-image: url(images/bones.png);
+  background-image: url(../images/bones.png);
 }
 
 #infoText{
