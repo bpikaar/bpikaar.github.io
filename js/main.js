@@ -53,6 +53,8 @@ function createFish(event)
     
     numberOfFish++;
     ui.innerHTML = "Number of fish: " + numberOfFish;
+    
+    fish.addEventListener("click", changeImageFish);
 }
 
 function createBubble()
@@ -70,6 +72,13 @@ function createBubble()
         var time = Math.random() * 500 + 500;
         window.setTimeout(createBubble, time);
     }
+}
+
+function changeImageFish(e)
+{
+    var fish = e.target;
+    
+    fish.classList.add("dead");
 }
 
 //

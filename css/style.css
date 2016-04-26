@@ -43,6 +43,10 @@ background {
     background-size: cover;
 }
 
+.dead{
+  background-image: url(images/bones.png);
+}
+
 #infoText{
   font-size: 3em;
   color: white;
