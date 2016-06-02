@@ -27,6 +27,7 @@ body * {
 menu {
     background-color: #B5ADAA;
     width: 100%; height: 80px;
+    border-bottom: 4px solid grey;
 }
 
 snapbutton {
