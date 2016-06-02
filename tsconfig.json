@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "sourceMap":  true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "target":"es6",
+        "out": "dist/js/main.js"
+    },
+    "exclude": [
+        "dist"
+    ]
+}
