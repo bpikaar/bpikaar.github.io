@@ -8,6 +8,7 @@ class GameObject {
     private _width  : number;
     private _height : number;
     private _scale  : number;
+    private name   : string;
     
     //Properties
     public get x(): number          { return this._x;       }
@@ -29,9 +30,10 @@ class GameObject {
      * @param <x> x position
      * @param <y> y position
      */
-    constructor(x: number, y: number) {
+    constructor(x: number, y: number, name: string) {
         this._x     = x;
         this._y     = y;
+        this.name   = name;
         this._scale = 1;
     }
     

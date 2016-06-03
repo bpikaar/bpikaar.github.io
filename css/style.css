@@ -32,10 +32,14 @@ menu {
 
 snapbutton {
     background-image: url(../images/snapbutton_on.png);
-    width: 369px; height: 38px;
+    width: 214px; height: 38px;
     cursor: pointer;
 }
-
+exportbutton {
+    background-image: url(../images/exportbutton.png);
+    width: 206px; height: 38px;
+    cursor: pointer;
+}
 /* ------------------------------------------------------------------ */
 /* GAME OBJECTS */
 castle {

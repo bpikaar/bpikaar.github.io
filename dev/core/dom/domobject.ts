@@ -1,4 +1,6 @@
-/// <reference path="gameobject.ts"/>
+/// <reference path="../gameobject.ts"/>
+/// <reference path="animation.ts" />
+
 
 class DOMObject extends GameObject{
 
@@ -14,7 +16,7 @@ class DOMObject extends GameObject{
      * Basic object to draw DOM elements
      */
     constructor(x: number, y: number, HTMLtagName: string, animated?: boolean) {
-        super(x, y);
+        super(x, y, HTMLtagName);
         this._animated = animated;
         
         this.htmlElement = document.createElement(HTMLtagName);

@@ -1,6 +1,6 @@
-/// <reference path="gameobject.ts" />
-/// <reference path="animation.ts" />
-
+/// <reference path="../core/gameobject.ts" />
+/// <reference path="../core/dom/animation.ts" />
+/// <reference path="../core/dom/domobject.ts" />
 
 /**
  * MenuItem 

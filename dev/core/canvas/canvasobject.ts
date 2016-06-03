@@ -1,4 +1,4 @@
-/// <reference path="GameObject.ts"/>
+/// <reference path="../GameObject.ts"/>
 
 class CanvasObject extends GameObject {
 
@@ -9,8 +9,7 @@ class CanvasObject extends GameObject {
      * Basic object to draw a canvas object. HTML has to have a canvas tag!
      */
     constructor(x: number, y: number, imageName: string) {
-        super(x, y)
-        
+        super(x, y, "name")
         
         var canvas      = document.getElementsByTagName("canvas")[0];
         this.context    = canvas.getContext('2d');

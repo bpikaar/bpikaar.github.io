@@ -1,6 +1,6 @@
 /// <reference path="menuitem.ts" />
-/// <reference path="domobject.ts" />
-/// <reference path="button.ts" />
+/// <reference path="../core/dom/domobject.ts" />
+/// <reference path="../buttons/button.ts" />
 
 
 /**
@@ -32,6 +32,7 @@ class Menu extends DOMObject {
             this.menuItems.push(new MenuItem(itemNumber * itemSize + this.menuOffset , 10, this.animatedMenuOptions[i], true));   
         }
         
-        let snapButton = new Button(this.menuOptions.length * itemSize + this.menuOffset + 50, 16);   
+        let snapButton = new SnapButton(this.menuOptions.length * itemSize + this.menuOffset + 50, 16);
+        let exporButton = new ExportButton(snapButton.x + snapButton.width + 50, 16);
     }
 }

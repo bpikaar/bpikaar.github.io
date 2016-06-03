@@ -1,15 +1,17 @@
-/// <reference path="gameobject.ts" />
-/// <reference path="menu.ts" />
+/// <reference path="core/gameobject.ts" />
+/// <reference path="menu/menu.ts" />
 
 class Game {
     private gameObjects: Array<GameObject>;
+    private objectsToExport: Array<GameObject>;
     
     public static instance: Game;
     
     constructor() {
         Game.instance = this;
         
-        this.gameObjects = new Array<GameObject>();
+        this.gameObjects        = new Array<GameObject>();
+        this.objectsToExport    = new Array<GameObject>();
         
         this.startGame();
 
@@ -41,5 +43,17 @@ class Game {
     
     public addElement(gameObject: GameObject) : void {
         this.gameObjects.push(gameObject);
+    }
+    
+    public addObjectToExport(gameObject: GameObject) : void {
+        this.objectsToExport.push(gameObject);
+    }
+    
+    public exportToJSON() : void {
+        let outputString: string;
+        
+        outputString = JSON.stringify(this.objectsToExport, ['name', 'x', 'y'], '\t');
+        
+        console.log(outputString);
     }
 }
