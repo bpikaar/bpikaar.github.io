@@ -1,0 +1,116 @@
+body {
+    background-color: #70CF51;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    margin:0px; padding:0px;
+    
+    background-image: url("../images/grass2.png"); /* go away bob! */
+    background-repeat: repeat;
+    
+}
+
+body * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    
+    /* prevent ghosting */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select:none;
+    
+    transform-origin: 0% 0%; /* to be able to scale menu items */
+}
+
+menu {
+    background-color: #B5ADAA;
+    width: 100%; height: 80px;
+    border-bottom: 4px solid grey;
+}
+
+snapbutton {
+    background-image: url(../images/snapbutton_on.png);
+    width: 214px; height: 38px;
+    cursor: pointer;
+}
+exportbutton {
+    background-image: url(../images/exportbutton.png);
+    width: 206px; height: 38px;
+    cursor: pointer;
+}
+/* ------------------------------------------------------------------ */
+/* GAME OBJECTS */
+castle {
+    background-image: url(../images/castle.png);
+    width: 374px; height: 323px;
+}
+tree {
+    background-image: url(../images/tree.png);
+    width: 100px; height: 153px;
+}
+stump {
+    background-image: url(../images/stump.png);
+    width: 33px; height: 20px;
+}
+fountain {
+    background-image: url(../images/fountain.png);
+    width: 106px; height: 76px;
+}
+sign {
+    background-image: url(../images/sign.png);
+    width: 29px; height: 39px;
+}
+tent {
+    background-image: url(../images/tent.png);
+    width: 172px; height: 158px;
+}
+market {
+    background-image: url(../images/market.png);
+    width: 132px; height: 105px;
+}
+market2 {
+    background-image: url(../images/market2.png);
+    width: 124px; height: 113px;
+}
+barrel1 {
+    background-image: url(../images/barrel1.png);
+    width: 22px; height: 24px;
+}
+barrel2 {
+    background-image: url(../images/barrel2.png);
+    width: 22px; height: 24px;
+}
+plant {
+    background-image: url(../images/plant.png);
+    width: 20px; height: 36px;
+}
+fence {
+    background-image: url(../images/fence.png);
+    width: 65px; height: 66px;
+}
+cross {
+    background-image: url(../images/cross.png);
+    width: 31px; height: 39px;
+}
+hay {
+    background-image: url(../images/hay.png);
+    width: 75px; height: 52px;
+}
+firepole {
+    background-image: url(../images/firepole.png);
+    width: 75px; height: 52px;
+}
+logs {
+    background-image: url(../images/logs.png);
+    width: 75px; height: 52px;
+}
+heavyfence {
+    background-image: url(../images/heavyfence.png);
+    width: 33px; height: 29px;
+}
+bird {
+    background-image: url(../images/bird.png);
+    width: 28px; height: 32px;
+}
