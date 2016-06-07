@@ -27,6 +27,8 @@ class DraggableDomObject extends DOMObject{
 
     public drag(event: MouseEvent) : void { 
         event.preventDefault();
+
+        document.body.appendChild(this.htmlElement);
         // als de alt key is ingedrukt, dan maken we hier een nieuw gameobject aan, net zoals de menubutton doet
         if(event.altKey) {
             let go = new DraggableDomObject(this.x, this.y, this.htmlElement.tagName, event.offsetX, event.offsetY, this.animated);

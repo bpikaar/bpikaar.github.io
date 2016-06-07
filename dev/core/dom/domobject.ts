@@ -7,7 +7,7 @@ class DOMObject extends GameObject{
     private animation:  Animation;
     private _animated:   boolean;
     
-    protected htmlElement:  HTMLElement;
+    public htmlElement:  HTMLElement;
 
     public get animated() : boolean {
         return this._animated;
