@@ -54,6 +54,8 @@ class DraggableDomObject extends DOMObject{
             this.x = Math.round(this.x/Settings.gridSize) * Settings.gridSize;
             this.y = Math.round(this.y/Settings.gridSize) * Settings.gridSize;
             
+            Game.instance.sortObjectsInDom();
+
             this.draw();
         }
         

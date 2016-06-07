@@ -199,6 +199,12 @@ var Game = (function () {
         outputString = JSON.stringify(this.objectsToExport, ['name', 'x', 'y'], '\t');
         console.log(outputString);
     };
+    Game.prototype.sortObjectsInDom = function () {
+        this.objectsToExport.sort(function (a, b) {
+            return (a.y + a.height > b.y + b.height) ? 1 : ((b.y + b.height > a.y + a.height) ? -1 : 0);
+        });
+        this.objectsToExport.forEach(function (elem) { return document.body.appendChild(elem.htmlElement); });
+    };
     return Game;
 }());
 window.addEventListener("load", function () {
@@ -283,6 +289,7 @@ var DraggableDomObject = (function (_super) {
         if (Settings.snapping) {
             this.x = Math.round(this.x / Settings.gridSize) * Settings.gridSize;
             this.y = Math.round(this.y / Settings.gridSize) * Settings.gridSize;
+            Game.instance.sortObjectsInDom();
             this.draw();
         }
         window.removeEventListener("mousemove", this.mouseMoveBind);
