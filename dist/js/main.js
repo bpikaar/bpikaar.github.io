@@ -115,6 +115,8 @@ var MenuItem = (function (_super) {
         this.x = x;
         this.y = y;
         this.HTMLtagName = HTMLtagName;
+        this.htmlElement.classList.add('selectable');
+        this.htmlElement.classList.add('menuItem');
         this.scale = Math.min(1, Settings.sizeMenuItem / this.height, Settings.sizeMenuItem / this.width);
         this.htmlElement.addEventListener("mousedown", function (e) { return _this.createElement(e); });
         this.draw();
@@ -260,6 +262,7 @@ var DraggableDomObject = (function (_super) {
         _super.call(this, x, y, HTMLtagName, animated);
         this.offSetX = 0;
         this.offSetY = 0;
+        this.htmlElement.classList.add('selectable');
         Game.instance.addObjectToExport(this);
         this.htmlElement.addEventListener("mousedown", function (e) { return _this.drag(e); });
         this.htmlElement.addEventListener("mouseup", function (e) { return _this.drop(e); });

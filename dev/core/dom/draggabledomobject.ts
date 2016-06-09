@@ -12,6 +12,7 @@ class DraggableDomObject extends DOMObject{
     
     constructor(x: number, y: number, HTMLtagName: string, offsetX: number, offsetY: number, animated?: boolean) {
         super(x, y, HTMLtagName, animated);
+        this.htmlElement.classList.add('selectable');
        Game.instance.addObjectToExport(this);
        
        this.htmlElement.addEventListener("mousedown", (e) => this.drag(e));

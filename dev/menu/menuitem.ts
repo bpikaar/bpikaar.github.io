@@ -16,7 +16,9 @@ class MenuItem extends DOMObject {
         this.x              = x;
         this.y              = y;
         this.HTMLtagName    = HTMLtagName;
-        
+        this.htmlElement.classList.add('selectable');
+        this.htmlElement.classList.add('menuItem');
+
         // format all menu item to a 54 x 54 scale
         this.scale = Math.min(1, Settings.sizeMenuItem/this.height, Settings.sizeMenuItem/this.width);
         
