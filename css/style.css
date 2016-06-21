@@ -4,9 +4,8 @@ body {
     overflow:hidden;
     margin:0px; padding:0px;
     
-    background-image: url("../images/grass2.png"); /* go away bob! */
-    background-repeat: repeat;
-    
+    background-image: url("../images/grass2.png"); 
+    background-repeat: repeat;  
 }
 
 body * {
@@ -19,16 +18,26 @@ body * {
     /* prevent ghosting */
     -moz-user-select: none;
     -webkit-user-select: none;
-    user-select:none;
+    /*user-select:none;*/
+    -ms-user-select: none;
+    
     transform-origin: 0% 0%; /* to be able to scale menu items */
 }
-
+/* ------------------------------------------------------------------ */
+/* MENU */
 menu {
     background-color: #B5ADAA;
     width: 100%; height: 80px;
     border-bottom: 4px solid grey;
 }
-
+.menuItem {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+.menuItem:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
 snapbutton {
     background-image: url(../images/snapbutton_on.png);
     width: 214px; height: 38px;
@@ -40,7 +49,16 @@ exportbutton {
     cursor: pointer;
 }
 /* ------------------------------------------------------------------ */
+/*  */
+.selectable:hover {
+    /*filter to outline transparant object*/
+    -webkit-filter: drop-shadow(-1px -1px 1px white) drop-shadow(1px 1px 1px white) drop-shadow(-1px 1px 1px white) drop-shadow(1px -1px 1px white);
+    filter: drop-shadow(-1px -1px 1px white) drop-shadow(1px 1px 1px white);
+}
+
+/* ------------------------------------------------------------------ */
 /* GAME OBJECTS */
+
 castle {
     background-image: url(../images/castle.png);
     width: 374px; height: 323px;
