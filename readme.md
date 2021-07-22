@@ -15,7 +15,7 @@ All exercises are made with Typescript and Html Elements.
 
 | **Close Call**  |   |
 |:-:|:-|
-| [![Close Call](./images/close_call.png)](https://hr-cmgt.github.io/PRG08-close-call-completed/?target=_blank) | *Topic* <br> **Polymorphism** <br><br> *Goal* <br>Make sure all cars stop right in front od the stones <br><br> *Code* <br>[Github](https://github.com/HR-CMGT/PRG08-close-call-completed) |
+| [![Close Call](./images/close_call.png)](https://hr-cmgt.github.io/PRG08-close-call-completed/){:target="_blank"} | *Topic* <br> **Polymorphism** <br><br> *Goal* <br>Make sure all cars stop right in front od the stones <br><br> *Code* <br>[Github](https://github.com/HR-CMGT/PRG08-close-call-completed) |
 | **Jibby**  |   |
 | [![Jibby](./images/jibby.png)](https://hr-cmgt.github.io/PRG08-Jibby-completed/) | *Topic* <br> **Strategy Pattern** <br><br> *Goal* <br>Jibby is a tamagotchi you have to keep alive and satisfied <br><br> *Code* <br>[Github](https://github.com/HR-CMGT/PRG08-Jibby-completed) |
 | **Angry Captain**  |   |
