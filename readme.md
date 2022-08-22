@@ -9,7 +9,7 @@
 | [![Sign Language Quiz](./images/sign_language.png)](https://bpikaar.github.io/sign-language-quiz/learn/){:target="_blank"} [Train the model](https://bpikaar.github.io/sign-language-quiz/learn/){:target="_blank"} <br> [Play the quiz](https://bpikaar.github.io/sign-language-quiz/){:target="_blank"} <br> [code on GitHub](https://github.com/bpikaar/sign-language-quiz/){:target="_blank"} | [![Ruimtegruis](./images/ruimtegruis.png)](https://bpikaar.github.io/ruimtegruis/){:target="_blank"} [Play the game](https://bpikaar.github.io/ruimtegruis/){:target="_blank"} <br> [code on GitHub](https://github.com/bpikaar/ruimtegruis/){:target="_blank"} <br> &nbsp;
 
 ## Games created for school projects
-These assignments are made for students as exercises. With these exercises student learn the more advanced principals of OOP like Abstract classes, Interfaces and Design Patterns. 
+These assignments are made for students as exercises. Through these exercises students learn the more advanced principals of OOP like Abstract classes, Interfaces and Design Patterns. 
 
 All exercises are made with Typescript and Html Elements. 
 
