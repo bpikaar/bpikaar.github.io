@@ -8,7 +8,7 @@
 | **Sign Language Quiz**  | **Ruimtegruis** |
 | [![Sign Language Quiz](./images/sign_language.png)](https://bpikaar.github.io/sign-language-quiz/learn/) [Train the model](https://bpikaar.github.io/sign-language-quiz/learn/) <br> [Play the quiz](https://bpikaar.github.io/sign-language-quiz/) <br> [code on GitHub](https://github.com/bpikaar/sign-language-quiz/) | [![Ruimtegruis](./images/ruimtegruis.png)](https://bpikaar.github.io/ruimtegruis/) [Play the game](https://bpikaar.github.io/ruimtegruis/) <br> [code on GitHub](https://github.com/bpikaar/ruimtegruis/) <br> &nbsp;
 | **Senti-Meter**  |  |
-| [![Senti-Meter](https://github.com/bpikaar/senti-meter/blob/main/screenshot-app.png)](https://sandbox.cmgt.hr.nl) [Demo](https://sandbox.cmgt.hr.nl) <br> [code on GitHub](https://github.com/bpikaar/senti-meter) |  |
+| [![Senti-Meter](./images/senti-ment.png)](https://sandbox.cmgt.hr.nl) [Demo](https://sandbox.cmgt.hr.nl) <br> [code on GitHub](https://github.com/bpikaar/senti-meter) |  |
 
 ## Games created for school projects
 These assignments are made for students as exercises. Through these exercises students learn the more advanced principals of OOP like Abstract classes, Interfaces and Design Patterns. 
